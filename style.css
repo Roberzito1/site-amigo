@@ -7,27 +7,58 @@ body {
 }
 
 header {
-  background-color: #333;
+  background: linear-gradient(90deg, #4b6cb7, #182848); /* gradiente bonito */
   color: white;
-  padding: 20px;
+  padding: 25px 20px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
+nav a:hover {
+  color: #ffcc00; /* muda a cor ao passar o mouse */
+}
 nav a:hover {
   text-decoration: underline;
 }
 
 section {
-  padding: 50px 20px;
-  background-color: #fff;
-  margin: 20px auto;
-  max-width: 800px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #fff;
+    margin: 30px auto;
+    padding: 60px 20px;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* sombra mais suave */
+    transition: transform 0.3s;
+}
+
+section:hover {
+  transform: translateY(-5px); /* efeito leve ao passar o mouse */
+}
+
+form input, form textarea {
+  width: 80%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+}
+
+form button {
+  padding: 12px 25px;
+  border: none;
+  background-color: #4b6cb7;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #182848;
 }

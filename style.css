@@ -4,7 +4,7 @@ html {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #087ddd;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -65,4 +65,68 @@ form button {
 
 form button:hover {
   background-color: #182848;
+}
+
+
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 200%;
+  gap: 16px;
+  transition: 0.3s;
+}
+
+.container li{
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 80px;
+  border-radius: 50px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1.2px solid #eee;
+   box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.4),
+   -2px -5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container li img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container li,
+.container li img
+{
+  transition: 0.3s;
+}
+.container li .content {
+  transition: 1.5s ease;
+}
+#servicos {
+  text-align: center;
+  padding: 50px;
+  background-color: #f9f9f9;
+}
+
+.veleiros {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.veleiros img {
+  width: 250px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease-in-out;
+}
+.veleiros img:hover{
+  transform: translate(-10px);
 }

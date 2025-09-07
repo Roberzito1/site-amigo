@@ -4,7 +4,7 @@ html {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #087ddd;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -106,4 +106,27 @@ form button:hover {
 }
 .container li .content {
   transition: 1.5s ease;
+}
+#servicos {
+  text-align: center;
+  padding: 50px;
+  background-color: #f9f9f9;
+}
+
+.veleiros {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.veleiros img {
+  width: 250px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease-in-out;
+}
+.veleiros img:hover{
+  transform: translate(-10px);
 }

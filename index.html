@@ -13,10 +13,20 @@
     }
     h1 {
         color: #333;
+        opacity: 0;
+        transition: opacity 1.5s;
     }
     p {
         color: #666;
     }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    
 </style>
 </head>
 <body>
@@ -25,9 +35,9 @@
     <header>
         <h1>Logo do Amigo</h1>
     <nav>
-        <a href="#sobre">Sobre</a> |
-        <a href="#servicos">Serviços</a> |
-        <a href="#contato">Contato</a> |
+        <a href="#sobre" id="btnSobre">Sobre</a> |
+        <a href="#servicos" id="btnServicos">Serviços</a> |
+        <a href="#contato" id="btnContato">Contato</a> |
     </nav>
     </header>
 
@@ -64,6 +74,9 @@
     <textarea name="mensagem"></textarea><br><br>
 
     <button type="submit">Enviar</button>
+<button onclick="window.location.href='https://roberzito1.github.io/site-amigo/';">Serviços
+  </button>
+</form>  
 
     <script>
   document.getElementById("btnSobre").addEventListener("click", function() {
@@ -77,9 +90,17 @@
   document.getElementById("btnContato").addEventListener("click", function() {
     alert("Você clicou em Contato!");
   });
-</script>
-<button onclick="window.location.href='https://roberzito1.github.io/site-amigo/';">Serviços
-  </button>
-</form>    
+
+  const botaoEnviar = document.querySelector("form button[type='submit']");
+  botaoEnviar.addEventListener("click", function(event) {
+    document.body.style.backgroundColor = "#ffdd57";
+    alert("Obrigado pelo contato!");
+  });
+
+  window.addEventListener("load", () => {
+    const titulo = document.querySelector("h1")
+    titulo.style.opacity = 1;
+  });
+</script>  
 </body>
 </html>
